@@ -1,7 +1,5 @@
 """
-A series of helper functions used throughout the course.
-
-If a function gets defined once and could be used over and over, it'll go in here.
+A series of helper functions.
 """
 import torch
 import matplotlib.pyplot as plt
@@ -251,18 +249,6 @@ def download_data(source: str,
                   destination: str,
                   remove_source: bool = True) -> Path:
     """Downloads a zipped dataset from source and unzips to destination.
-
-    Args:
-        source (str): A link to a zipped file containing data.
-        destination (str): A target directory to unzip data to.
-        remove_source (bool): Whether to remove the source after downloading and extracting.
-    
-    Returns:
-        pathlib.Path to downloaded data.
-    
-    Example usage:
-        download_data(source="https://github.com/mrdbourke/pytorch-deep-learning/raw/main/data/pizza_steak_sushi.zip",
-                      destination="pizza_steak_sushi")
     """
     # Setup path to data folder
     data_path = Path("data/")
